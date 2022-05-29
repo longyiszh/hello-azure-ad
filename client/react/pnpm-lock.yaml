@@ -1,6 +1,8 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@azure/msal-browser': ^2.24.0
+  '@azure/msal-react': ^1.4.0
   '@testing-library/dom': ^8.13.0
   '@testing-library/jest-dom': ^5.16.4
   '@testing-library/react': ^13.3.0
@@ -16,6 +18,8 @@ specifiers:
   web-vitals: ^2.1.4
 
 dependencies:
+  '@azure/msal-browser': 2.24.0
+  '@azure/msal-react': 1.4.0_exfyt6rywg7dzmdijbv725ueju
   react: 18.1.0
   react-dom: 18.1.0_react@18.1.0
   web-vitals: 2.1.4
@@ -53,6 +57,29 @@ packages:
       jsonpointer: 5.0.0
       leven: 3.1.0
     dev: true
+
+  /@azure/msal-browser/2.24.0:
+    resolution: {integrity: sha512-P4Z8mQ6hTuA9ss3HCltso7fRmuX1raaU6444G35c0FhaD6hfqViFYRa7hk16AiAs9HkUQHbBaL3gLjKMpX3heA==}
+    engines: {node: '>=0.8.0'}
+    dependencies:
+      '@azure/msal-common': 6.3.0
+    dev: false
+
+  /@azure/msal-common/6.3.0:
+    resolution: {integrity: sha512-ZyLq9GdnLBi/83YpysE86TFKbA0TuvfNAN5Psqu20cdAjLo/4rw4ttiItdh1G//XeGErHk9qn57gi2AYU1b5/Q==}
+    engines: {node: '>=0.8.0'}
+    dev: false
+
+  /@azure/msal-react/1.4.0_exfyt6rywg7dzmdijbv725ueju:
+    resolution: {integrity: sha512-8H6pjks3tHQmMuqa8pLM2YcEYzg9cQCV1K+ba+fJnQDtu4ksZPXLj9kXf7ioM6vX4KJSU+fJFfhlbECu4F6jCg==}
+    engines: {node: '>=10'}
+    peerDependencies:
+      '@azure/msal-browser': ^2.24.0
+      react: ^16.8.0 || ^17 || ^18
+    dependencies:
+      '@azure/msal-browser': 2.24.0
+      react: 18.1.0
+    dev: false
 
   /@babel/code-frame/7.16.7:
     resolution: {integrity: sha512-iAXqUn8IIeBTNd72xsFlgaXHkMBMt6y4HJp1tIaK465CWLT/fG1aqB7ykr95gHHmlBdGbFeWWfyB4NJJ0nmeIg==}

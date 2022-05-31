@@ -3,3 +3,8 @@ export interface IUser {
   name: string;
   description: string;
 }
+
+export interface IInputUser {
+  name?: string;
+  description?: string;
+}

@@ -1,12 +1,20 @@
+import { AddUser } from "src/components/addUser/AddUser";
+import { AuthInfo } from "src/components/authInfo/AuthInfo";
+import { UserList } from "src/components/userList/UserList";
+import styles from "./Home.view.module.css";
+
 export const HomeView = () => {
 
   return (
-    <section className="HomeView">
+    <section className={styles.HomeView}>
       <aside>
-        auth info
+        <AuthInfo />
+      </aside>
+      <aside>
+        <AddUser />
       </aside>
       <main>
-        Users Info retrieved from server
+        <UserList />
       </main>
     </section>
   )

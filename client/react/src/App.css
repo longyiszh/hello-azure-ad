@@ -46,6 +46,12 @@ div.spacer {
   justify-content: center;
 }
 
+.sectionTitle {
+  color: #61dafb;
+  border-bottom: 1px solid #000000;
+  padding-bottom: 0.5em;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

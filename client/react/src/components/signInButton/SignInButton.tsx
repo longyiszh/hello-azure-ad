@@ -1,7 +1,7 @@
 import { MouseEvent } from "react";
 import { useMsal } from "@azure/msal-react"
 import { loginRequest } from "src/configs/auth";
-import signInButtonStyles from "./SignInButton.module.css";
+import styles from "./SignInButton.module.css";
 
 export interface ISignInButtonProps {
   mode: "LOGIN" | "LOGOUT"
@@ -32,8 +32,8 @@ export const SignInButton = (props: ISignInButtonProps) => {
 
   return (
     <>
-      {props.mode === "LOGIN"?<button className={signInButtonStyles.button} onClick={onSignInButtonClick}>Sign In</button>: null}
-      {props.mode === "LOGOUT"?<button className={signInButtonStyles.button} onClick={onSignOutButtonClick}>Sign out</button>: null}
+      {props.mode === "LOGIN"?<button className={styles.button} onClick={onSignInButtonClick}>Sign In</button>: null}
+      {props.mode === "LOGOUT"?<button className={styles.button} onClick={onSignOutButtonClick}>Sign out</button>: null}
     </>
 
   );

@@ -1,0 +1,10 @@
+.authToken {
+  padding: 1em;
+  font-size: 1em;
+  height: 8em;
+  overflow: auto
+}
+
+.code {
+  overflow-wrap: anywhere;
+}

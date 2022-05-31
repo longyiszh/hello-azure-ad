@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { AddUser } from "src/components/addUser/AddUser";
 import { AuthInfo, IAuthInfoProps } from "src/components/authInfo/AuthInfo";
 import { UserList } from "src/components/userList/UserList";
@@ -9,6 +10,8 @@ export interface IHomeViewProps {
 
 export const HomeView = (props: IHomeViewProps) => {
 
+  const [users, setUsers] = useState([{id: "1", name: "bibi", description: "aaho"}]);
+
   return (
     <section className={styles.HomeView}>
       <aside>
@@ -18,7 +21,7 @@ export const HomeView = (props: IHomeViewProps) => {
         <AddUser />
       </aside>
       <main>
-        <UserList />
+        <UserList records={users} />
       </main>
     </section>
   )

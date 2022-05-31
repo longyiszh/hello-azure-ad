@@ -11,3 +11,7 @@
 .userList li {
   margin: 1em;
 }
+
+.infoNoRecords {
+  margin: 0;
+}

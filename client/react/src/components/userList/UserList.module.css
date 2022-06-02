@@ -1,0 +1,17 @@
+.userList {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  flex-wrap: wrap;
+}
+
+.userList li {
+  margin: 1em;
+}
+
+.infoNoRecords {
+  margin: 0;
+}

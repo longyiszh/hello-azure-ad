@@ -1,0 +1,23 @@
+.inputs {
+  width: 20em;
+  margin: 1em;
+}
+
+.inputLabel {
+  display: flex;
+  justify-content: space-between;
+  margin: 1em;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+
+.button {
+  background-color: transparent;
+  border: 2px solid #61dafb;
+  padding: 1em;
+  cursor: pointer;
+}

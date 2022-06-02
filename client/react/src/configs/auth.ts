@@ -14,5 +14,5 @@ export const msalConfig: Configuration = {
 
 // Add scopes here for ID token to be used at Microsoft identity platform endpoints.
 export const loginRequest: PopupRequest | RedirectRequest = {
-  scopes: ["User.Read"]
+  scopes: (process.env.REACT_APP_AUTH_SCOPES || "").split(",")
 };

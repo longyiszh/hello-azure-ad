@@ -9,7 +9,7 @@ import { loginRequest } from './configs/auth';
 import { SilentRequest } from '@azure/msal-browser';
 
 function App() {
-  const { instance, accounts, inProgress } = useMsal();
+  const { instance, accounts } = useMsal();
   const isAuthenticated = useIsAuthenticated();
 
   const [accessToken, setAccessToken] = useState("");

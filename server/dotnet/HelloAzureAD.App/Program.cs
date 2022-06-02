@@ -1,6 +1,8 @@
 ﻿using HelloAzureAD.App.Services;
 using Microsoft.Identity.Web;
 
+var allowCorsPolicy = "Allow CORS";
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -10,6 +12,17 @@ builder.Services.AddMicrosoftIdentityWebApiAuthentication(builder.Configuration)
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: allowCorsPolicy,
+                      builder =>
+                      {
+                          builder.WithOrigins("*")
+                           .AllowAnyMethod()
+                           .AllowAnyHeader();
+                      });
+});
 
 builder.Services.AddSingleton<IUserService, UserService>();
 
@@ -23,6 +36,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseCors(allowCorsPolicy);
 
 app.UseAuthentication();
 app.UseAuthorization();

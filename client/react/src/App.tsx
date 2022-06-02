@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
@@ -32,13 +32,17 @@ function App() {
 
   };
 
-  if (isAuthenticated) {
-    requestAccessToken();
-  } else {
-    if (accessToken) {
-      setAccessToken("");
+  useEffect(() => {
+
+    if (isAuthenticated) {
+      requestAccessToken();
+    } else {
+      if (accessToken) {
+        setAccessToken("");
+      }
     }
-  }
+
+  }, []);
 
   return (
     <div className="App">

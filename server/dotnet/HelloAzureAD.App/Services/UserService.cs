@@ -10,10 +10,16 @@ public class UserService: IUserService
 
     public List<User> Add(List<User> newUsers)
     {
+        List<User> addingUsers = new();
         foreach (var user in newUsers)
         {
-            users.Add(user);
+            User addingUser = user with
+            {
+                ID = Guid.NewGuid().ToString()
+            };
+            addingUsers.Add(addingUser);
         }
-        return newUsers;
+        users.AddRange(addingUsers);
+        return addingUsers;
     }
 }
